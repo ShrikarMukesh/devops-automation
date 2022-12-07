@@ -1,4 +1,6 @@
-FROM openjdk:8
+FROM openjdk:11
+
 EXPOSE 8080
-ADD target/devops-integration.jar devops-integration.jar
+ADD target/devops-automation.jar devops-automation.jar
+
 ENTRYPOINT ["java","-jar","/devops-automation.jar"]
