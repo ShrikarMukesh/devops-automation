@@ -6,5 +6,12 @@ pipeline {
                git 'https://github.com/ShrikarMukesh/devops-automation.git'
             }
         }
+        stage('Unit testing'){
+             steps{
+                 sh 'mvn test'
+             }
+        }
+
     }
+
 }
