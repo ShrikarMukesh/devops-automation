@@ -9,6 +9,11 @@ MyGitHub SetUp for SonarCube: https://github.com/ShrikarMukesh/Devops-CI-CD/blob
 docker conatiner stop jksdhkcjsh
 docker conatiner rm jksdhkcjsh
 
+build docker image:
+docker build -t devops-automation .
+docker build -t my-java-app .
+docker run -p 8080:8080 devops-automation
+
 docker run -d --name sonarqube -p 9000:9000 sonarqube
 
 docker run -d --name sonarqube -p 9000:9000 -v sonarqube_conf:/opt/sonarqube/conf -v sonarqube_extensions:/opt/sonarqube/extensions -v sonarqube_logs:/opt/sonarqube/logs -v sonarqube_data:/opt/sonarqube/data sonarqube

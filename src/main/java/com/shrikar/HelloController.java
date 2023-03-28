@@ -4,17 +4,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    @GetMapping
+
+    @GetMapping("/")
     public String message(){
         return "welcome to javatechie";
     }
 
-    @GetMapping("hello")
+    @GetMapping("/hello")
     public String hello(){
         return "Hello Real Madrid";
     }
 
-    @GetMapping("hi")
+    @GetMapping("/hi")
     public String hi(){
         return "Hi Shrikar";
     }
